@@ -1,4 +1,4 @@
--setting S1 ciscoooooooooooooooooooooo
+-setting S1
 hostname S1
 banner motd "warning"
 line console 0

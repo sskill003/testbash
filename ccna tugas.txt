@@ -1,0 +1,39 @@
+-setting S1
+hostname S1
+banner motd "warning"
+line console 0
+password cisco
+login
+exit
+enable secret class
+service password-encryption
+interface vlan 1
+ip address 10.10.10.2 255.255.255.0
+no shutdown
+exit
+ip domain-name cisco.com
+ip ssh version 2
+crypto key generate rsa
+1024
+ip ssh version 2
+username admin pass ccna
+line vty 0 15
+login local
+transport input ssh
+exit
+exit
+ip interface brief
+conf t
+interface range fastethernet 0/3-24,g0/1-2
+shutdown
+switchport mode access
+exit
+interface range fastethernet 0/1-2
+switchport mode access
+switchport port-security 
+switchport port-security maximum 2
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+
+
+

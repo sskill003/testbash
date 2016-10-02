@@ -35,6 +35,6 @@ switchport port-security maximum 2
 switchport port-security mac-address sticky
 switchport port-security violation shutdown
 WTF
-
+What the zieg
 
 
